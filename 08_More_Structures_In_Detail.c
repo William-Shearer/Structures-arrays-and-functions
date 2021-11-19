@@ -116,9 +116,9 @@ int main(int argc, char* argv[])
 
 	// Create the structure array during runtime with malloc().
 
-	ptr_arrays_one = (struct no_internal_arrays*)malloc(sizeof(struct no_internal_arrays) * dynamic_array_size);
-	// See? malloc() is great. Don't forget to typecast it, though, at definition time. It is a good idea.
-
+	ptr_arrays_one = malloc(sizeof(struct no_internal_arrays) * dynamic_array_size);
+	// Apparently no need to typecast malloc in C.
+	
 	// Essentially, what we now have defined is ptr_arrays_one[3], of 60 bytes.
 	// Now, let's see how to populate and display this.
 
